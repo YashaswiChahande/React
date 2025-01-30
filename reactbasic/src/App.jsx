@@ -2,15 +2,12 @@ import React, { useState } from "react";
 
 
 function App (){
-  const [val, setVal] = useState({name: 'harsh', isBanned: false});
+  const [val, setVal] = useState([1,2,3,4,5,6]);
 
   return (
-    <div className="p-4">
-      <h1>name : {val.name}</h1>
-      <h2>banned : {val.isBanned.toString()}</h2>
-      <button onClick={()=>setVal({...val, isBanned: !val.isBanned})} className={`px-3 py-1 ${
-        val.isBanned ? "bg-red-500" : "bg-blue-600"
-        } rounded-full text-white`}>Change </button>
+    <div className="p-5">
+      {val.map(item => <h1>{item}</h1>)}
+      <button onClick={()=>setVal(() => val.filter((item,index) => index != val.length - 1))} className= 'px-3 py-1  bg-blue-600 rounded-full text-white'>Change </button>
     </div>
   )
 }
