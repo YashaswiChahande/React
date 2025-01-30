@@ -7,7 +7,7 @@ function App (){
   return (
     <div className="p-5">
       {val.map(item => <h1>{item}</h1>)}
-      <button onClick={()=>setVal(() => val.filter((item,index) => index != val.length - 1))} className= 'px-3 py-1  bg-blue-600 rounded-full text-white'>Change </button>
+      <button onClick={()=>setVal(() => val.filter((item,index) => index != 2))} className= 'px-3 py-1  bg-blue-600 rounded-full text-white'>Change </button>
     </div>
   )
 }
