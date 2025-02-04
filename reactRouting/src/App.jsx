@@ -1,10 +1,14 @@
 import React from 'react'
+import Nav from "./components/Nav"
+import Routing from "./utils/Routing"
+
 
 function App() {
   return (
-    <div>
-      
-    </div>
+    <>
+    <Nav/>
+    <Routing/>
+  </>
   )
 }
 
