@@ -12,12 +12,12 @@ const Nav = () => {
 
   distinct_category = [...new Set(distinct_category)]
 
-  console.log(distinct_category)
+  // console.log(distinct_category)
 
   const color = () => {
     return `rgba(${ (Math.random() * 255).toFixed()},${ (Math.random() * 255).toFixed()},${ (Math.random() * 255).toFixed()}, 0.4)`;
   }
-  console.log(color())
+  // console.log(color())
   return (
     <nav className='w-[15%] h-full bg-zinc-50 flex flex-col items-center pt-5' >
         <a className='py-2 px-5 border rounded mb-3 border-blue-300 text-blue-300' href="/create">Add new Product</a>

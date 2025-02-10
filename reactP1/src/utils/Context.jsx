@@ -10,7 +10,7 @@ const Context = (props) => {
         try {
             const { data } = await axios("/products");
             setproducts(data);
-            console.log(data);
+            // console.log(data);
         } catch (error) {
             console.log(error)
         }
