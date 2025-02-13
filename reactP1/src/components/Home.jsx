@@ -27,10 +27,13 @@ const Home = () => {
 
     useEffect(() => {
 
-        console.log(category);
         if(!filteredProducts || category == "undefined");
             setfilteredProducts(products);
-        if (category !="undefined" ) getproductscategory();
+        if ( category !="undefined" ) {
+
+            // getproductscategory();
+            setfilteredProducts(products.filter(p => p.category == category)) 
+        }
     }, [category, products]);
 
   return products ? ( 
